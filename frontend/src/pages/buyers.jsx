@@ -16,7 +16,7 @@ function Marketplace() {
 
     // Fetch products from Flask backend
     useEffect(() => {
-        fetch("http://127.0.0.1:5000/api/products")
+        fetch("https://farmersconnectapi.onrender.com")
             .then((res) => res.json())
             .then((data) => {
                 const normalized = data.map((item) => ({

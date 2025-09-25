@@ -11,7 +11,7 @@ function Farmers() {
   useEffect(() => {
     async function fetchProducts() {
       try {
-        const res = await fetch("http://127.0.0.1:5000/api/products");
+        const res = await fetch("https://farmersconnectapi.onrender.com");
         const data = await res.json();
         setProducts(data);
       } catch (err) {
@@ -27,7 +27,7 @@ function Farmers() {
 
   const handleDelete = async (id) => {
     try {
-      await fetch(`http://127.0.0.1:5000/api/products/${id}`, {
+      await fetch(`https://farmersconnectapi.onrender.com/${id}`, {
         method: "DELETE",
       });
       setProducts((prev) => prev.filter((p) => p.id !== id));
